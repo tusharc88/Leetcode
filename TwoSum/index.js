@@ -1,7 +1,4 @@
-// lessons learnt
-// can't use break; statement in map
-// Somehow the ... spread operator is not working inside reduce for accumulator. {...accumulator, currentVal: index}
-// probably because it is taking currentVal as literal string instead of number
+// lessons learnt 1. can't use break; statement in map
 
 var twoSum = function(nums, target) {
   let hashMapObj = nums.reduce((accumulator, currentVal, index) => {
