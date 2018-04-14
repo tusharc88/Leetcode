@@ -37,7 +37,10 @@ var reverse = function(x) {
     ) * Math.sign(x);
 
   // condition to check overflow
-  return reversed <= 0x7fffffff && reversed >= -0x80000000 ? reversed : 0;
+  // return reversed <= 0x7fffffff && reversed >= -0x80000000 ? reversed : 0;
+  if (reversed > 2147483647 || reversed < -2147483648) return 0;
+
+  return reversed;
 };
 
 module.exports = reverse;
